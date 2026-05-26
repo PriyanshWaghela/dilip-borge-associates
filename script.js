@@ -378,18 +378,18 @@ document.querySelector("#bookingNext")?.addEventListener("click", async () => {
     files: document.querySelector("#bookingFiles").files?.length || 0
   };
   try {
-    const response = await fetch("/api/bookings", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const response = await fetch('/.netlify/functions/bookings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
-    if (!response.ok) throw new Error("Server error");
+    if (!response.ok) throw new Error('Server error');
     const result = await response.json();
-    toast(result.message || "Appointment booked and emailed.");
-    document.querySelector("#portalAppointment").textContent = `${data.date}, ${data.time}`;
+    toast(result.message || 'Appointment booked and emailed.');
+    document.querySelector('#portalAppointment').textContent = `${data.date}, ${data.time}`;
   } catch (err) {
     console.error(err);
-    toast("Failed to send appointment email.");
+    toast('Failed to send appointment email. Please call +91 98985 63718.');
   }
   // Reset wizard
   bookingStep = 0;

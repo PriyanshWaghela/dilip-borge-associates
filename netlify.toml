@@ -1,0 +1,20 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  # Bundle each function with its own node_modules
+  node_bundler = "esbuild"
+
+# Redirect /api/bookings → Netlify function (no separate backend needed)
+[[redirects]]
+  from = "/api/bookings"
+  to = "/.netlify/functions/bookings"
+  status = 200
+
+# Keep HTML page routing working
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

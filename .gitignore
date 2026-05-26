@@ -1,0 +1,5 @@
+.env
+backend/node_modules/
+backend/package-lock.json
+netlify/functions/node_modules/
+netlify/functions/package-lock.json
