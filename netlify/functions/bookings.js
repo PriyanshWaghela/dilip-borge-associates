@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const { getSupabaseAdminClient } = require('./_supabase');
 
 exports.handler = async (event) => {
   // Only allow POST
@@ -42,6 +43,47 @@ exports.handler = async (event) => {
       headers: { 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify({ message: 'Missing required fields: name, email, service.' }),
     };
+  }
+
+  // Initialize Supabase client
+  let supabase;
+  try {
+    supabase = getSupabaseAdminClient();
+  } catch (error) {
+    console.error('Missing Supabase env vars');
+    return {
+      statusCode: 500,
+      headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'Server misconfiguration: missing Supabase credentials' }),
+    };
+  }
+
+  const requiredEnv = ['EMAIL_USER', 'EMAIL_PASS'];
+  const missing = requiredEnv.filter(key => !process.env[key]);
+  if (missing.length) {
+    console.error('Missing env vars:', missing.join(', '));
+    return {
+      statusCode: 500,
+      headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `Server misconfiguration: missing ${missing.join(', ')}` }),
+    };
+  }
+
+  // Insert appointment into Supabase
+  const { error: dbError } = await supabase.from('appointments').insert([
+    {
+      name,
+      email,
+      service,
+      date,
+      time,
+      type,
+      files,
+    }
+  ]);
+  if (dbError) {
+    console.error('Supabase insert error:', dbError);
+    // continue; email will still be sent
   }
 
   // Create SMTP transporter using Netlify env variables

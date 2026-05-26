@@ -451,8 +451,28 @@ document.querySelector("#faqSearch")?.addEventListener("input", (event) => {
 
 document.querySelector("#inquiryForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
-  toast(`Inquiry submitted for ${document.querySelector("#inquiryService").value}.`);
-  event.target.reset();
+  const data = {
+    name: document.querySelector("#inquiryName")?.value,
+    email: document.querySelector("#inquiryEmail")?.value,
+    phone: document.querySelector("#inquiryPhone")?.value,
+    service: document.querySelector("#inquiryService")?.value,
+    message: document.querySelector("#inquiryMessage")?.value,
+  };
+  fetch("/.netlify/functions/inquiries", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then(async (response) => {
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.message || "Failed to submit inquiry.");
+      toast(result.message || "Inquiry submitted successfully.");
+      event.target.reset();
+    })
+    .catch((error) => {
+      console.error(error);
+      toast("Failed to submit inquiry. Please call +91 98985 63718.");
+    });
 });
 
 document.querySelector("#clientLoginBtn")?.addEventListener("click", () => {

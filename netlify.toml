@@ -12,9 +12,7 @@
   to = "/.netlify/functions/bookings"
   status = 200
 
-# Keep HTML page routing working
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/api/inquiries"
+  to = "/.netlify/functions/inquiries"
   status = 200
-  force = false
