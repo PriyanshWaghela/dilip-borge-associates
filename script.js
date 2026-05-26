@@ -1,39 +1,39 @@
 const services = [
-  ["business", "GST Registration", "Tax-ready registration support with document checklist.", "From Rs. 1,999", "badge-indian-rupee"],
-  ["business", "GST Return Filing", "Monthly, quarterly and annual return preparation.", "From Rs. 999", "receipt"],
-  ["business", "Income Tax Return Filing", "ITR filing for individuals, professionals and businesses.", "From Rs. 1,499", "landmark"],
-  ["business", "TDS Services", "TDS calculation, return filing and compliance checks.", "From Rs. 1,999", "percent"],
-  ["business", "MSME Registration", "Udyam registration and advisory documentation.", "From Rs. 999", "building-2"],
-  ["business", "Company Compliance", "Annual filings, registers, governance and reminders.", "Custom", "briefcase-business"],
-  ["business", "LLP Compliance", "LLP annual filing and partner compliance support.", "Custom", "folder-check"],
-  ["business", "Partnership Deed", "Drafting and coordination for business partnerships.", "From Rs. 2,999", "handshake"],
-  ["business", "Trademark Coordination", "Search, filing coordination and response support.", "Custom", "badge-check"],
-  ["business", "Audit Services", "Audit support, working papers and compliance coordination.", "Custom", "clipboard-check"],
-  ["business", "Bookkeeping Services", "Day-to-day books, ledger maintenance, reconciliations and MIS reports.", "From Rs. 2,999/mo", "book-open-check"],
-  ["legal", "Agreements", "Business, service, vendor and personal agreements.", "From Rs. 2,999", "file-pen-line"],
-  ["legal", "Affidavits", "Drafting and notary-ready affidavit preparation.", "From Rs. 799", "file-text"],
-  ["legal", "Rent Agreements", "Rental agreement drafting and execution support.", "From Rs. 1,499", "home"],
-  ["legal", "Legal Notices", "Careful notice drafting and dispatch coordination.", "From Rs. 3,999", "mail-warning"],
-  ["legal", "Power of Attorney", "General and specific POA documentation.", "From Rs. 2,999", "key-round"],
-  ["legal", "Registered Sale Deed", "Sale deed drafting and registration coordination.", "Custom", "scroll-text"],
-  ["legal", "Adoption Deed", "Sensitive deed drafting and documentation support.", "Custom", "heart-handshake"],
-  ["legal", "Gift Deed", "Property and asset transfer deed drafting.", "Custom", "gift"],
-  ["legal", "Will Documentation", "Will drafting with clarity and confidentiality.", "From Rs. 4,999", "file-lock-2"],
-  ["legal", "Marriage Registration", "Documentation support for registration process.", "Custom", "badge-check"],
-  ["legal", "Trust Deed", "Trust formation deed and compliance coordination.", "Custom", "landmark"],
-  ["legal", "Mortgage Deed", "Mortgage documentation and review support.", "Custom", "file-key-2"],
-  ["legal", "Property Documentation", "Property document drafting and checklist review.", "Custom", "folder-open"],
-  ["legal", "Title Clearance", "Title document review and clearance coordination.", "Custom", "shield-check"],
-  ["notary", "Urgent Notarization", "Fast-track notarization for complete documents.", "From Rs. 499", "stamp"],
-  ["notary", "Document Authentication", "Identity and document authentication support.", "From Rs. 499", "fingerprint"],
-  ["notary", "Business Agreement Notarization", "Notary support for commercial agreements.", "From Rs. 999", "badge-check"],
-  ["litigation", "GST Notices", "Notice review, reply drafting and representation support.", "Custom", "mail-warning"],
-  ["litigation", "Income Tax Scrutiny", "Scrutiny response preparation and documentation.", "Custom", "search-check"],
-  ["litigation", "Civil Matters", "Case preparation and representation coordination.", "Custom", "scale"],
-  ["litigation", "Criminal Matters", "Confidential legal coordination and case support.", "Custom", "shield-alert"],
-  ["litigation", "Family Matters", "Sensitive representation support and documentation.", "Custom", "users"],
-  ["litigation", "Section 138 Recovery Matters", "Cheque dishonor recovery process support.", "Custom", "badge-dollar-sign"],
-  ["litigation", "Mortgage Matters", "Mortgage documentation and representation.", "Custom", "file-key-2"]
+  ["business", "GST Registration", "Tax-ready registration support with document checklist.", "", "badge-indian-rupee"],
+  ["business", "GST Return Filing", "Monthly, quarterly and annual return preparation.", "", "receipt"],
+  ["business", "Income Tax Return Filing", "ITR filing for individuals, professionals and businesses.", "", "landmark"],
+  ["business", "TDS Services", "TDS calculation, return filing and compliance checks.", "", "percent"],
+  ["business", "MSME Registration", "Udyam registration and advisory documentation.", "", "building-2"],
+  ["business", "Company Compliance", "Annual filings, registers, governance and reminders.", "", "briefcase-business"],
+  ["business", "LLP Compliance", "LLP annual filing and partner compliance support.", "", "folder-check"],
+  ["business", "Partnership Deed", "Drafting and coordination for business partnerships.", "", "handshake"],
+  ["business", "Trademark Coordination", "Search, filing coordination and response support.", "", "badge-check"],
+  ["business", "Audit Services", "Audit support, working papers and compliance coordination.", "", "clipboard-check"],
+  ["business", "Bookkeeping Services", "Day-to-day books, ledger maintenance, reconciliations and MIS reports.", "", "book-open-check"],
+  ["legal", "Agreements", "Business, service, vendor and personal agreements.", "", "file-pen-line"],
+  ["legal", "Affidavits", "Drafting and notary-ready affidavit preparation.", "", "file-text"],
+  ["legal", "Rent Agreements", "Rental agreement drafting and execution support.", "", "home"],
+  ["legal", "Legal Notices", "Careful notice drafting and dispatch coordination.", "", "mail-warning"],
+  ["legal", "Power of Attorney", "General and specific POA documentation.", "", "key-round"],
+  ["legal", "Registered Sale Deed", "Sale deed drafting and registration coordination.", "", "scroll-text"],
+  ["legal", "Adoption Deed", "Sensitive deed drafting and documentation support.", "", "heart-handshake"],
+  ["legal", "Gift Deed", "Property and asset transfer deed drafting.", "", "gift"],
+  ["legal", "Will Documentation", "Will drafting with clarity and confidentiality.", "", "file-lock-2"],
+  ["legal", "Marriage Registration", "Documentation support for registration process.", "", "badge-check"],
+  ["legal", "Trust Deed", "Trust formation deed and compliance coordination.", "", "landmark"],
+  ["legal", "Mortgage Deed", "Mortgage documentation and review support.", "", "file-key-2"],
+  ["legal", "Property Documentation", "Property document drafting and checklist review.", "", "folder-open"],
+  ["legal", "Title Clearance", "Title document review and clearance coordination.", "", "shield-check"],
+  ["notary", "Urgent Notarization", "Fast-track notarization for complete documents.", "", "stamp"],
+  ["notary", "Document Authentication", "Identity and document authentication support.", "", "fingerprint"],
+  ["notary", "Business Agreement Notarization", "Notary support for commercial agreements.", "", "badge-check"],
+  ["litigation", "GST Notices", "Notice review, reply drafting and representation support.", "", "mail-warning"],
+  ["litigation", "Income Tax Scrutiny", "Scrutiny response preparation and documentation.", "", "search-check"],
+  ["litigation", "Civil Matters", "Case preparation and representation coordination.", "", "scale"],
+  ["litigation", "Criminal Matters", "Confidential legal coordination and case support.", "", "shield-alert"],
+  ["litigation", "Family Matters", "Sensitive representation support and documentation.", "", "users"],
+  ["litigation", "Section 138 Recovery Matters", "Cheque dishonor recovery process support.", "", "badge-dollar-sign"],
+  ["litigation", "Mortgage Matters", "Mortgage documentation and representation.", "", "file-key-2"]
 ];
 
 const resources = [
@@ -136,12 +136,11 @@ function renderServices() {
   const query = (serviceSearch?.value || "").toLowerCase();
   grid.innerHTML = services
     .filter(([cat, title, desc]) => (activeFilter === "all" || cat === activeFilter) && `${title} ${desc}`.toLowerCase().includes(query))
-    .map(([cat, title, desc, price, iconName]) => `
+    .map(([cat, title, desc, iconName]) => `
       <article class="service-card" data-category="${cat}">
         <div class="icon-wrap">${icon(iconName)}</div>
         <h3>${title}</h3>
         <p>${desc}</p>
-        <span class="price">${price}</span>
         <details>
           <summary>View scope</summary>
           <p>Includes consultation, document checklist, execution timeline and portal-ready status tracking.</p>
@@ -362,14 +361,37 @@ document.querySelector("#bookingBack")?.addEventListener("click", () => {
   bookingStep = Math.max(bookingStep - 1, 0);
   updateBookingWizard();
 });
-document.querySelector("#bookingNext")?.addEventListener("click", () => {
+document.querySelector("#bookingNext")?.addEventListener("click", async () => {
   if (bookingStep < 4) {
     bookingStep += 1;
     updateBookingWizard();
     return;
   }
-  document.querySelector("#portalAppointment").textContent = `${document.querySelector("#bookingDate").value || "Today"}, ${selectedSlot}`;
-  toast("Appointment confirmed and added to the client portal.");
+  // Gather booking data
+  const data = {
+    name: document.querySelector("#bookingName").value,
+    phone: document.querySelector("#bookingPhone").value,
+    service: document.querySelector("#bookingService").value,
+    date: document.querySelector("#bookingDate").value || "Today",
+    time: selectedSlot,
+    type: document.querySelector("input[name='type']:checked")?.value || "Online",
+    files: document.querySelector("#bookingFiles")?.files?.length || 0
+  };
+  try {
+    const response = await fetch("/api/bookings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) throw new Error("Server error");
+    const result = await response.json();
+    toast(result.message || "Appointment booked and emailed.");
+    document.querySelector("#portalAppointment").textContent = `${data.date}, ${data.time}`;
+  } catch (err) {
+    console.error(err);
+    toast("Failed to send appointment email.");
+  }
+  // Reset wizard
   bookingStep = 0;
   updateBookingWizard();
 });
