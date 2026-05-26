@@ -16,13 +16,13 @@ const transporter = nodemailer.createTransport({
 
 // POST /api/bookings - receive booking data and email it
 router.post('/', async (req, res) => {
-  const { name, phone, service, date, time, type, files } = req.body;
+  const { name, email, service, date, time, type, files } = req.body;
   const emailTo = process.env.EMAIL_RECEIVER || process.env.EMAIL_USER;
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: emailTo,
     subject: `New Appointment Booking: ${service}`,
-    text: `Appointment Details:\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDate: ${date}\nTime: ${time}\nType: ${type}\nAttachments: ${files} file(s)`,
+    text: `Appointment Details:\n\nName: ${name}\nEmail: ${email}\nService: ${service}\nDate: ${date}\nTime: ${time}\nType: ${type}\nAttachments: ${files} file(s)`,
   };
   try {
     await transporter.sendMail(mailOptions);

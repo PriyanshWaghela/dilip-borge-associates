@@ -370,12 +370,12 @@ document.querySelector("#bookingNext")?.addEventListener("click", async () => {
   // Gather booking data
   const data = {
     name: document.querySelector("#bookingName").value,
-    phone: document.querySelector("#bookingPhone").value,
+    email: document.querySelector("#bookingEmail").value,
     service: document.querySelector("#bookingService").value,
     date: document.querySelector("#bookingDate").value || "Today",
     time: selectedSlot,
     type: document.querySelector("input[name='type']:checked")?.value || "Online",
-    files: document.querySelector("#bookingFiles")?.files?.length || 0
+    files: document.querySelector("#bookingFiles").files?.length || 0
   };
   try {
     const response = await fetch("/api/bookings", {
